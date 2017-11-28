@@ -1,0 +1,35 @@
+﻿<Window x:Class="Sample.Tasks.Desktop.View.InventorsByPublicationView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Inventors By Publication" Height="350" Width="525">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="5">
+
+            <Label>Inventor by publication</Label>
+
+            <Separator Background="Transparent" Width="10"></Separator>
+
+            <TextBox Width="150" Name="PublicationNumber"></TextBox>
+
+            <Separator Background="Transparent" Width="10"></Separator>
+
+            <Button Name="FetchInventor">Fetch</Button>
+
+        </StackPanel>
+
+        <Grid Row="1" Margin="5">
+
+            <ContentPresenter Name="Inventor">
+
+            </ContentPresenter>
+
+        </Grid>
+
+    </Grid>
+</Window>
